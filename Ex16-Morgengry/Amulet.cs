@@ -61,7 +61,45 @@ namespace Ex16_Morgengry
 
         public Book (string itemid, string title, double price)
         {
-
+            Itemid = itemid;
+            Title = title;
+            Price = price;
         }
+
+        public string Itemid
+        {
+            get
+            {
+                return itemid;
+            }
+            set
+            {
+                itemid = value;
+            }
+        }
+        public string Title
+        {
+            get
+            {
+                return title;
+            }
+            set
+            {
+                title = value;
+            }
+        }
+        public double Price
+        {
+            get
+            {
+                return price;
+            }
+            set
+            {
+                price = value;
+            }
+        }
+
     }
+
 }
