@@ -9,9 +9,8 @@ namespace Ex16_Morgengry
     public class Amulet
     {
       
-
-        private string itemid; // private data
-        private string design; // private data
+        private string itemid; // privat variable
+        private string design; // private variable
 
         public enum Level
         {
@@ -56,6 +55,13 @@ namespace Ex16_Morgengry
 
     class Book
     {
+        private string itemid;
+        private string title;
+        private double price; 
 
+        public Book (string itemid, string title, double price)
+        {
+
+        }
     }
 }
