@@ -19,12 +19,19 @@ namespace Ex16_Morgengry
             High
         };
 
-        Level quality;
+        private Level quality;
 
-        public Amulet (string itemid, string design, Level quality)
+        public Amulet (string itemid, Level quality, string design )
         {
             Itemid = itemid; // parameter ned i mellem mand
             Design = design; // parameter ned i mellem mand
+        }
+
+        public Amulet (string itemid, Level quality) : this (itemid, quality, "No Design" )
+        {
+        }
+        public Amulet(string itemid) : this (itemid, 0 , "No Design")
+        {
         }
 
         public string Itemid // Mellem mand
@@ -39,7 +46,7 @@ namespace Ex16_Morgengry
                 itemid = value; // lægger value ned i vores private data
             }
         }
-        public string Design // Mellem mand
+        public string Design // Mellem mand / property
         {
             get
             {
@@ -50,7 +57,22 @@ namespace Ex16_Morgengry
             {
                 design = value;  // lægger value ned i vores private data
             }
+
         }
+        public Level Quality // Mellem mand / property
+        {
+            get
+            {
+                return quality;
+            }
+
+            set
+            {
+                quality = value;  // lægger value ned i vores private data
+            }
+
+        }
+
     }
 
     class Book
@@ -64,6 +86,14 @@ namespace Ex16_Morgengry
             Itemid = itemid;
             Title = title;
             Price = price;
+        }
+
+        public Book (string itemid, string title) : this(itemid, title, 0)
+        {
+        }
+
+        public Book (string itemid) : this (itemid, "No Title", 0)
+        {
         }
 
         public string Itemid
