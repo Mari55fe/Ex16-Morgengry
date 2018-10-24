@@ -73,6 +73,10 @@ namespace Ex16_Morgengry
 
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
     class Book
@@ -130,6 +134,10 @@ namespace Ex16_Morgengry
             }
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
 }
