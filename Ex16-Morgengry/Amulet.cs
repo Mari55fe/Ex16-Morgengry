@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace Ex16_Morgengry
 {
+    public enum Level
+    {
+        low,
+        medium,
+        high
+    };
+
     public class Amulet
     {
-      
         private string itemid; // privat variable
         private string design; // private variable
-
-        public enum Level
-        {
-            Low,
-            Medium,
-            High
-        };
-
         private Level quality;
 
         public Amulet (string itemid, Level quality, string design )
         {
             Itemid = itemid; // parameter ned i mellem mand
             Design = design; // parameter ned i mellem mand
+            Quality = quality; 
+     
         }
 
         public Amulet (string itemid, Level quality) : this (itemid, quality, "No Design" )
@@ -33,7 +33,7 @@ namespace Ex16_Morgengry
         public Amulet(string itemid) : this (itemid, 0 , "No Design")
         {
         }
-
+        
         public string Itemid // Mellem mand
         {
             get
@@ -79,8 +79,8 @@ namespace Ex16_Morgengry
         }
     }
 
-    class Book
-    {
+     public class Book
+     {
         private string itemid;
         private string title;
         private double price; 
