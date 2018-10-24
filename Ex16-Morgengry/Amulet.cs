@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ex16_Morgengry
 {
-    class Morgengry
+    class Amulet
     {
+        
+    }
+
+    class Book
+    {
+
     }
 }

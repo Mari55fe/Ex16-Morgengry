@@ -10,6 +10,7 @@ namespace Ex16_Morgengry
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
