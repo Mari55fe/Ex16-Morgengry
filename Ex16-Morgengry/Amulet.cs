@@ -13,7 +13,7 @@ namespace Ex16_Morgengry
         private string design; // private variable
         private Level quality;
 
-        public Amulet(string itemId, Level quality, string design)
+        public Amulet(string itemId, Level quality, string design) //:base (ItemId) [til brug i abstract class]
         {
             ItemId = itemId;
             Design = design; // parameter ned i mellem mand

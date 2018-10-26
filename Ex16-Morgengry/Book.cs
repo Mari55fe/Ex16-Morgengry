@@ -12,7 +12,7 @@ namespace Ex16_Morgengry
         private string title;
         private double price;
 
-        public Book(string itemId, string title, double price)
+        public Book(string itemId, string title, double price) //:base (itemId) [til brug i abstract class]
         {
             ItemId = itemId;
             Title = title;
