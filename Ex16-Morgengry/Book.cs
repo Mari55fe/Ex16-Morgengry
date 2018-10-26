@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ex16_Morgengry
 {
-    public class Book
+    public class Book : Merchandise
     {
-        private string itemid;
+        
         private string title;
         private double price;
 
-        public Book(string itemid, string title, double price)
+        public Book(string itemid, string title, double price) : base (itemid)
         {
             Itemid = itemid;
             Title = title;
@@ -27,17 +27,6 @@ namespace Ex16_Morgengry
         {
         }
 
-        public string Itemid
-        {
-            get
-            {
-                return itemid;
-            }
-            set
-            {
-                itemid = value;
-            }
-        }
         public string Title
         {
             get
@@ -60,16 +49,9 @@ namespace Ex16_Morgengry
                 price = value;
             }
         }
-        override
-                public string ToString()
+        public override string ToString()
         {
-            string result = null;
-
-            result += "ItemId: " + itemid + ", ";
-            result += "Title: " + title + ", ";
-            result += "Price: " + price;
-
-            return result;
+            return $"ItemId: {Itemid}, Title: {Title}, Price: {Price}";
         }
     }
 }

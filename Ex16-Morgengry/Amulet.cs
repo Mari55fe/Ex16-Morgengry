@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 namespace Ex16_Morgengry
 {
     
-    public class Amulet
+    public class Amulet : Merchandise
     {
-        private string itemid; // privat variable
+
         private string design; // private variable
         private Level quality;
 
-        public Amulet(string itemid, Level quality, string design)
+        public Amulet(string itemid, Level quality, string design) :base (itemid)
         {
-            Itemid = itemid; // parameter ned i mellem mand
             Design = design; // parameter ned i mellem mand
             Quality = quality;
         }
@@ -23,18 +22,7 @@ namespace Ex16_Morgengry
         public Amulet(string itemid, Level quality) : this(itemid, quality, ""){}
         public Amulet(string itemid) : this(itemid, Level.medium, ""){}
 
-        public string Itemid // Mellem mand
-        {
-            get
-            {
-                return itemid;
-            }
-
-            set
-            {
-                itemid = value; // lægger value ned i vores private data
-            }
-        }
+       
         public string Design // Mellem mand / property
         {
             get
@@ -62,16 +50,9 @@ namespace Ex16_Morgengry
 
         }
 
-        override
-         public string ToString()
+        public override string ToString()
         {
-            string result = null;
-
-            result += "ItemId: " + itemid + ", ";
-            result += "Quality: " + quality + ", ";
-            result += "Design: " + design;
-
-            return result;
+            return $"ItemId: {Itemid}, Quality: {Quality}, Design: {Design}";
         }
 
     }
