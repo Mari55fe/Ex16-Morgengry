@@ -6,34 +6,23 @@ using System.Threading.Tasks;
 
 namespace Ex16_Morgengry
 {
-    public enum Level
-    {
-        low,
-        medium,
-        high
-    };
-
+    
     public class Amulet
     {
         private string itemid; // privat variable
         private string design; // private variable
         private Level quality;
 
-        public Amulet (string itemid, Level quality, string design )
+        public Amulet(string itemid, Level quality, string design)
         {
             Itemid = itemid; // parameter ned i mellem mand
             Design = design; // parameter ned i mellem mand
-            Quality = quality; 
-     
+            Quality = quality;
         }
 
-        public Amulet (string itemid, Level quality) : this (itemid, quality, "No Design" )
-        {
-        }
-        public Amulet(string itemid) : this (itemid, 0 , "No Design")
-        {
-        }
-        
+        public Amulet(string itemid, Level quality) : this(itemid, quality, ""){}
+        public Amulet(string itemid) : this(itemid, Level.medium, ""){}
+
         public string Itemid // Mellem mand
         {
             get
@@ -73,71 +62,18 @@ namespace Ex16_Morgengry
 
         }
 
-        public override string ToString()
+        override
+         public string ToString()
         {
-            return base.ToString();
-        }
-    }
+            string result = null;
 
-     public class Book
-     {
-        private string itemid;
-        private string title;
-        private double price; 
+            result += "ItemId: " + itemid + ", ";
+            result += "Quality: " + quality + ", ";
+            result += "Design: " + design;
 
-        public Book (string itemid, string title, double price)
-        {
-            Itemid = itemid;
-            Title = title;
-            Price = price;
+            return result;
         }
 
-        public Book (string itemid, string title) : this(itemid, title, 0)
-        {
-        }
-
-        public Book (string itemid) : this (itemid, "No Title", 0)
-        {
-        }
-
-        public string Itemid
-        {
-            get
-            {
-                return itemid;
-            }
-            set
-            {
-                itemid = value;
-            }
-        }
-        public string Title
-        {
-            get
-            {
-                return title;
-            }
-            set
-            {
-                title = value;
-            }
-        }
-        public double Price
-        {
-            get
-            {
-                return price;
-            }
-            set
-            {
-                price = value;
-            }
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 
 }
