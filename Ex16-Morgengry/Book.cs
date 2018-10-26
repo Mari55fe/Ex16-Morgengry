@@ -12,7 +12,7 @@ namespace Ex16_Morgengry
         private string title;
         private double price;
 
-        public Book(string itemid, string title, double price) : base (itemid)
+        public Book(string itemid, string title, double price)
         {
             Itemid = itemid;
             Title = title;
@@ -29,25 +29,14 @@ namespace Ex16_Morgengry
 
         public string Title
         {
-            get
-            {
-                return title;
-            }
-            set
-            {
-                title = value;
-            }
-        }
+            get { return title; }
+            set { title = value; }
+        }    
+        
         public double Price
         {
-            get
-            {
-                return price;
-            }
-            set
-            {
-                price = value;
-            }
+            get { return price; }
+            set{ price = value; }
         }
         public override string ToString()
         {

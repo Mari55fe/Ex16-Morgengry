@@ -13,8 +13,9 @@ namespace Ex16_Morgengry
         private string design; // private variable
         private Level quality;
 
-        public Amulet(string itemid, Level quality, string design) :base (itemid)
+        public Amulet(string itemid, Level quality, string design)
         {
+            Itemid = itemid;
             Design = design; // parameter ned i mellem mand
             Quality = quality;
         }
@@ -25,29 +26,13 @@ namespace Ex16_Morgengry
        
         public string Design // Mellem mand / property
         {
-            get
-            {
-                return design;
-            }
-
-            set
-            {
-                design = value;  // lægger value ned i vores private data
-            }
-
+            get {return design;}
+            set { design = value;}  // lægger value ned i vores private data
         }
         public Level Quality // Mellem mand / property
         {
-            get
-            {
-                return quality;
-            }
-
-            set
-            {
-                quality = value;  // lægger value ned i vores private data
-            }
-
+            get { return quality; }
+            set { quality = value; } // lægger value ned i vores private data
         }
 
         public override string ToString()
