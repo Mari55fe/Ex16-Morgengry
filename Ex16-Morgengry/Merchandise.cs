@@ -8,22 +8,22 @@ namespace Ex16_Morgengry
 {
     public abstract class Merchandise
     {
-        private string itemid;
+        private string itemId;
 
         /*public Merchandise(string itemid)
         {
             Itemid = itemid; // parameter ned i mellem mand
         }*/
 
-        public string Itemid // Mellem mand
+        public string ItemId // Mellem mand
         {
-            get{return itemid;}
-            set{itemid = value;} // lægger value ned i vores private data
+            get{return itemId;}
+            set{itemId = value;} // lægger value ned i vores private data
         }
 
         public override string ToString()
         {
-            return $"ItemId: {Itemid}";
+            return $"ItemId: {ItemId}";
         }
     
     }

@@ -13,15 +13,15 @@ namespace Ex16_Morgengry
         private string design; // private variable
         private Level quality;
 
-        public Amulet(string itemid, Level quality, string design)
+        public Amulet(string itemId, Level quality, string design)
         {
-            Itemid = itemid;
+            ItemId = itemId;
             Design = design; // parameter ned i mellem mand
             Quality = quality;
         }
 
-        public Amulet(string itemid, Level quality) : this(itemid, quality, ""){}
-        public Amulet(string itemid) : this(itemid, Level.medium, ""){}
+        public Amulet(string itemId, Level quality) : this(itemId, quality, ""){}
+        public Amulet(string itemId) : this(itemId, Level.medium, ""){}
 
        
         public string Design // Mellem mand / property
@@ -37,7 +37,7 @@ namespace Ex16_Morgengry
 
         public override string ToString()
         {
-            return $"ItemId: {Itemid}, Quality: {Quality}, Design: {Design}";
+            return $"ItemId: {ItemId}, Quality: {Quality}, Design: {Design}";
         }
 
     }

@@ -12,18 +12,18 @@ namespace Ex16_Morgengry
         private string title;
         private double price;
 
-        public Book(string itemid, string title, double price)
+        public Book(string itemId, string title, double price)
         {
-            Itemid = itemid;
+            ItemId = itemId;
             Title = title;
             Price = price;
         }
 
-        public Book(string itemid, string title) : this(itemid, title, 0)
+        public Book(string itemId, string title) : this(itemId, title, 0)
         {
         }
 
-        public Book(string itemid) : this(itemid, "", 0)
+        public Book(string itemId) : this(itemId, "", 0)
         {
         }
 
@@ -40,7 +40,7 @@ namespace Ex16_Morgengry
         }
         public override string ToString()
         {
-            return $"ItemId: {Itemid}, Title: {Title}, Price: {Price}";
+            return $"ItemId: {ItemId}, Title: {Title}, Price: {Price}";
         }
     }
 }
