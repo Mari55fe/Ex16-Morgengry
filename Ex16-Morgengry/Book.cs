@@ -36,7 +36,7 @@ namespace Ex16_Morgengry
         public double Price
         {
             get { return price; }
-            set{ price = value; }
+            set { price = value; }
         }
         public override string ToString()
         {
