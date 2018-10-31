@@ -14,17 +14,17 @@ namespace Ex16_Morgengry
             return price;
         }
 
-       static public double GetValueOfAmulet(Amulet Amulet)
+       static public double GetValueOfAmulet(Amulet amulet)
         {
             double price = 12.5;
 
 
-            if (Amulet.Quality == Level.medium)
+            if (amulet.Quality == Level.medium)
             {
                 price = 20.0; 
             }
 
-            if (Amulet.Quality == Level.high)
+            if (amulet.Quality == Level.high)
             {
                 price = 27.5;
             }

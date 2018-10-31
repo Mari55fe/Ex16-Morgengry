@@ -21,13 +21,13 @@ namespace Ex16_Morgengry
             books.Add(book);
         }
 
-        public Book GetBook(string itemid)
+        public Book GetBook(string itemId)
         {
             Book resultat = null;
 
             for (int i = 0; i < books.Count ; i++)
             {
-                if (books[i].ItemId.Equals(itemid))
+                if (books[i].ItemId.Equals(itemId))
                 {
                     resultat = books[i];
                 }
