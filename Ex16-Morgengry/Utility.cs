@@ -1,13 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ex16_Morgengry
 {
-     public class Utility
+    public class Utility
      {
+        private double low = 12.5;
+        private double medium = 20.0;
+        private double high = 27.5;
+        private double course = 825.00;
+
+       public double LowQualityValue
+        {
+            get { return low; }
+            set { low = value; }
+        }
+
+        public double MediumQualityValue
+        {
+            get { return medium; }
+            set { medium = value; }
+        }
+        public double HighQualityValue
+        {
+            get { return high; }
+            set { high = value; }
+        }
+        public double CourseQualityValue
+        {
+            get { return course; }
+            set { course = value; }
+        }
 
         public static double GetValueOfMerchandise(Merchandise merchandise)
         {
