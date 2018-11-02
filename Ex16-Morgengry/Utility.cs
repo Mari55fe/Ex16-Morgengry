@@ -31,6 +31,7 @@ namespace Ex16_Morgengry
             set { course = value; }
         }
 
+
         public static double GetValueOfMerchandise(Merchandise merchandise)
         {
             double price = 0; 
