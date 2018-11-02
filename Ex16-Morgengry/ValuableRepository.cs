@@ -8,13 +8,10 @@ namespace Ex16_Morgengry
 {
     public class ValuableRepository
     {
-        private List<IValuable> valuables;
+        private List<IValuable> valuables = new List<IValuable>();
 
-        public ValuableRepository()
-        {
-            valuables = new List<IValuable>();
-        }
-        public void AddIValuable(IValuable valuable)
+        
+        public void AddValuable(IValuable valuable)
         {
             valuables.Add(valuable);
         }
@@ -34,6 +31,28 @@ namespace Ex16_Morgengry
                }
            });
             return result;
+        }
+        public double GetTotalValue()
+        {
+            double result = 0;
+            valuables.ForEach(x =>
+            {
+                if (x is Merchandise merchandise)
+                {
+                    result += merchandise.GetValue(); //+= betyder at man lægger til
+
+                }
+                else if (x is Course course)
+                {
+                    result += course.GetValue();
+                }
+            });
+            return result;
+
+        }
+        public int Count()
+        {
+            return valuables.Count();
         }
 
 

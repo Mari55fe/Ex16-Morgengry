@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Ex16_Morgengry
 {
-    public class Course
+    public class Course : IValuable
     {
         private string name;
         private int durationInMinutes;
+        private double course = 825;
+        public double CourseHourValue
+        {
+            get { return course; }
+            set { course = value; }
+        }
 
         public Course (string name, int durationInMinutes)
         {
@@ -33,7 +39,14 @@ namespace Ex16_Morgengry
         }
         public override string ToString()
         {
-            return $"Name: {Name}, Duration in Minutes: {DurationInMinutes}";
+            return $"Name: {Name}, Duration in Minutes: {DurationInMinutes}, Pris pr påbegyndt time: {CourseHourValue}";
+        }
+
+        public double GetValue()
+        { 
+            double hoursInitialized = Math.Ceiling(DurationInMinutes / 60.0); // en metode på hvordan man runder op 
+            double price = hoursInitialized * CourseHourValue;
+            return price;
         }
     }
 }

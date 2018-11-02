@@ -9,9 +9,30 @@ namespace Ex16_Morgengry
     
     public class Amulet : Merchandise
     {
-
+        private  double low = 12.5;
+        private  double medium = 20.0;
+        private  double high = 27.5;
         private string design; // private variable
         private Level quality;
+
+        public double LowQualityValue
+        {
+            get { return low; }
+            set { low = value; }
+        }
+
+        public double MediumQualityValue
+        {
+            get { return medium; }
+            set { medium = value; }
+        }
+        public double HighQualityValue
+        {
+            get { return high; }
+            set { high = value; }
+        }
+
+        
 
         public Amulet(string itemId, Level quality, string design) //:base (ItemId) [til brug i abstract class]
         {
@@ -40,6 +61,26 @@ namespace Ex16_Morgengry
             return $"ItemId: {ItemId}, Quality: {Quality}, Design: {Design}";
         }
 
+        public override double GetValue()
+        {
+            if (Quality == Level.low)
+            {
+                return LowQualityValue;
+            }
+
+            else if (Quality == Level.medium)
+            {
+                return MediumQualityValue;
+            }
+
+            else if (Quality == Level.high)
+            {
+                return HighQualityValue;
+            }
+            return 0;
+        }
+            
+        
     }
 
 }

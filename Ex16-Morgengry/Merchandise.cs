@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex16_Morgengry
 {
-    public abstract class Merchandise
+    public abstract class Merchandise : IValuable
     {
         private string itemId;
 
@@ -20,6 +20,8 @@ namespace Ex16_Morgengry
             get{return itemId;}
             set{itemId = value;} // lægger value ned i vores private data
         }
+
+        public abstract double GetValue();
 
         public override string ToString()
         {

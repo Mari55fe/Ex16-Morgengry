@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex16-Morgengry", "Ex16-Morg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{06BE0807-CCE2-421E-A96B-B3CA7D9C04CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest2.cs", "UnitTest2.cs\UnitTest2.cs.csproj", "{75EA5F2B-03CF-4B15-88FD-1E0F67A3F8A1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{06BE0807-CCE2-421E-A96B-B3CA7D9C04CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06BE0807-CCE2-421E-A96B-B3CA7D9C04CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06BE0807-CCE2-421E-A96B-B3CA7D9C04CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75EA5F2B-03CF-4B15-88FD-1E0F67A3F8A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75EA5F2B-03CF-4B15-88FD-1E0F67A3F8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75EA5F2B-03CF-4B15-88FD-1E0F67A3F8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75EA5F2B-03CF-4B15-88FD-1E0F67A3F8A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
