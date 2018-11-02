@@ -32,7 +32,7 @@ namespace Ex16_Morgengry
             }
             return resultat;
         }
-        public double GetTotalValue()
+        /*public double GetTotalValue()
         {
             double total = 0;
 
@@ -41,6 +41,6 @@ namespace Ex16_Morgengry
                 total += Utility.GetValueOfAmulet(amulets[i]); //+= betyder at man lægger til
             }
             return total;
-        }
+        }*/
     }
 }
