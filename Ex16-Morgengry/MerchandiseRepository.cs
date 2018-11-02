@@ -14,7 +14,7 @@ namespace Ex16_Morgengry
         {
             merchandise1 = new List<Merchandise>();
         }
-        public void AddAmulet(Merchandise merchandise)
+        public void AddMerchandise(Merchandise merchandise)
         {
             merchandise1.Add(merchandise);
         }

@@ -12,12 +12,14 @@ namespace Ex16_Morgengry
         public static double GetValueOfMerchandise(Merchandise merchandise)
         {
             double price = 0; 
-            if (merchandise is Book book)
+            if (merchandise is Book)
             {
+                Book book = (Book)merchandise;
                 price = book.Price;
             }
-            if (merchandise is Amulet amulet)
+            if (merchandise is Amulet )
             {
+                Amulet amulet = (Amulet)merchandise;
                 price = 12.5;
 
                 if (amulet.Quality == Level.medium)
@@ -32,6 +34,7 @@ namespace Ex16_Morgengry
             }
             return price;
         }
+
         /*static public double GetValueOfBook(Book book)
        {
             double price = book.Price;
