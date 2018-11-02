@@ -9,7 +9,7 @@ namespace Ex16_Morgengry
         private double high = 27.5;
         private double course = 825.00;
 
-       public double LowQualityValue
+        public double LowQualityValue
         {
             get { return low; }
             set { low = value; }
