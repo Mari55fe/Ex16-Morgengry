@@ -66,7 +66,7 @@ namespace Ex16_Morgengry
             double price = 0; 
             if (merchandise is Book book)
             {
-                //Book book = (Book)merchandise; [kan også gøres i stedet for  i  if (merchandise is Book book)]
+                //Book book = (Book)merchandise; [kan også gøres i stedet for book i  if (merchandise is Book book)]
                 price = book.Price;
             }
             if (merchandise is Amulet amulet)
