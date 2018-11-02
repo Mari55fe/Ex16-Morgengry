@@ -14,7 +14,7 @@ namespace UnitTest2.cs
         CourseRepository courses = new CourseRepository();
         MerchandiseRepository merchandise = new MerchandiseRepository();
 
-        [TestInitialize]
+        [TestInitialize] //alt der hedder Merchandise er ændret fra Book og Amulet til Merchandise for at få testen til at køre. 
         public void Init()
         {
             b1 = new Book("1");
