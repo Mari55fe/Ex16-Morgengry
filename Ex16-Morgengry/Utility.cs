@@ -4,28 +4,28 @@ namespace Ex16_Morgengry
 {
     public class Utility
      {
-        private double low = 12.5;
-        private double medium = 20.0;
-        private double high = 27.5;
-        private double course = 825.00;
+        private static double low = 12.5;
+        private static double medium = 20.0;
+        private static double high = 27.5;
+        private static double course = 875.00;
 
-        public double LowQualityValue
+        public static double LowQualityValue
         {
             get { return low; }
             set { low = value; }
         }
 
-        public double MediumQualityValue
+        public static double MediumQualityValue
         {
             get { return medium; }
             set { medium = value; }
         }
-        public double HighQualityValue
+        public static double HighQualityValue
         {
             get { return high; }
             set { high = value; }
         }
-        public double CourseQualityValue
+        public static double CourseHourValue
         {
             get { return course; }
             set { course = value; }
@@ -43,17 +43,22 @@ namespace Ex16_Morgengry
             if (merchandise is Amulet amulet)
             {
                 //Amulet amulet = (Amulet)merchandise;
-                price = 12.5;
+                
+                if (amulet.Quality == Level.low)
+                {
+                   price = LowQualityValue; 
+                }
 
                 if (amulet.Quality == Level.medium)
                 {
-                    price = 20.0;
+                    price = MediumQualityValue;
                 }
 
                 if (amulet.Quality == Level.high)
                 {
-                    price = 27.5;
+                    price = HighQualityValue;
                 }
+
             }
             return price;
         }
@@ -82,11 +87,11 @@ namespace Ex16_Morgengry
             return price;
        }*/
 
-       static public double GetValueOfCourse(Course course)
+       public static double GetValueOfCourse(Course course)
        {
             double minutter = course.DurationInMinutes;
             double hoursInitialized = Math.Ceiling(minutter / 60); // en metode på hvordan man runder op 
-            double price = hoursInitialized * 875.00;
+            double price = hoursInitialized * CourseHourValue;
             return price;
        }
         
