@@ -8,6 +8,58 @@ namespace Ex16_Morgengry
 {
      public class Utility
      {
+        private double low = 12.5;
+        private double medium = 20.0;
+        private double high = 27.5;
+        private double påbegyndt = 875;
+        public double Low
+        {
+            get
+            {
+                return low;
+            }
+            set
+            {
+                Low = low;
+            }
+        }
+        public double Medium
+        {
+            get
+            {
+                return medium;
+            }
+            set
+            {
+                medium = value;
+            }
+        }
+        public double High
+        {
+            get
+            {
+                return high;
+            }
+            set
+            {
+                high = value;
+            }
+        }
+
+        public double Påbegyndt
+        {
+            get
+            {
+                return påbegyndt;
+            }
+            set
+            {
+                påbegyndt = value;
+            }
+        }
+
+
+
 
         public static double GetValueOfMerchandise(Merchandise merchandise)
         {
